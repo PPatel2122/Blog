@@ -1,0 +1,1270 @@
+/* Head css */
+.parent{
+    width: 100%;
+    height: 70px;
+    
+    display: flex;
+    
+    align-items: center;
+    gap: 0px;
+
+
+    position: relative;
+
+    
+}
+.the{
+    position: absolute;
+    left: 280px;
+    animation-name: normal;
+    animation-duration: 1s;
+   
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+
+
+
+    font-family: Arial, Helvetica, sans-serif;
+    font-size:30px;
+    width: 50px;
+    height: 40px;
+    background-color: white;
+    rotate: -90deg;
+}
+@keyframes normal{
+    0%{
+        transform: translateY(0);
+    }
+    100%{
+        transform: translateY(340px);
+    }
+}
+.siren{
+    position: absolute;
+    right: 220px;
+    font-weight: bold;
+    font-size:50px;
+    font-family: Arial, Helvetica, sans-serif;
+    width: 90px;
+    height: auto;
+    background-color: white;
+
+
+    animation-name: normall;
+    animation-duration: 1s;
+   
+    animation-timing-function: linear;
+    animation-fill-mode: forwards;
+}
+@keyframes normall{
+    0%{
+        transform: translateX(0);
+    }
+    100%{
+        transform: translateX(-340px);
+    }
+}
+/* over */
+
+
+
+/* NAVBAR CSS */
+
+.menu-bar{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-self: center;
+    list-style-type: none;
+    padding: 4px;
+    height: 50px;
+    border-radius: 5px;
+}
+/* .Nav-Link{
+    color: black;
+    text-decoration: none;
+} */
+
+.Nav-Link{
+    text-decoration: none;
+    font-size: 17px;
+    margin: 5px;
+    color: black ;
+    font-weight: 650;
+}
+.menu_list{
+    width: 120px;
+    border-radius: 3px;
+    padding: 1px;
+}
+.menu_list::before{
+    content: '';
+    position: absolute;
+    top: 95%;
+    left: 0%;
+    transition: all 0.5% linear;
+}
+
+
+.hamburger{
+    display: none;
+}
+.bar{
+    display: block;
+    width: 25px;
+    height: 4px;
+    background-color: white;
+    margin: 2px auto;
+    transition: all 0.2s ease-in-out ;
+    border-radius: 2px;
+}
+
+
+
+@media screen and (max-width:600px) {
+    .nav-section{
+        flex-direction: row;
+        justify-content: space-between;
+        border-bottom: 3px solid #1C3342;
+    }
+    nav{
+        border-radius: 4px;
+        width: 25px;
+        padding: 5px;
+        height: 20px;
+        margin-top: 25px;
+        background-color: rgb(7, 7, 7);
+    }
+    .hamburger{
+        display: block;
+    }
+    .hamburger.hamactive .bar:nth-child(2){
+        opacity: 0;
+    }
+    .hamburger.hamactive .bar:nth-child(1){
+        transform: translateY(6px) rotate(45deg);
+    }
+    .hamburger.hamactive .bar:nth-child(3){
+        transform: translateY(-6px) rotate(-45deg);
+    }
+    .menu-bar{
+        z-index: 2;
+        position: fixed;    
+        top: -100%;
+        left: 4%;
+        width: 90%;
+        gap: 0px;
+        height: auto;
+        flex-direction: column;
+        transition: 0.5s;
+        background-color: #82d2d5;
+        text-align: center;
+        border-radius: 20px;
+    }
+    .Nav-Link{
+        margin: 8px 0;
+        font-weight: 550;
+        font-size: 18px;
+    }
+    .menu-bar.hamactive{
+        top: 95px;
+        margin: auto;
+        align-items: center;
+        gap: 10px;
+    }
+}
+
+
+
+
+
+.menu_list:hover>.menu_underline{
+    animation: underlinemove 2s infinite ;
+    
+
+}
+.menu_underline{
+    background-color: #1C3342;
+    width: 2%;
+    border-radius: 2px;
+    transition: 2s;
+    z-index: 7;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+}
+
+
+@keyframes underlinemove{
+    0%{
+        width: 0px;
+        height: 3px;
+
+        background-color: #1C3342;
+    }
+    100%{
+        width: 100%;
+        height: 3px;
+    }
+}
+/* .main{
+    margin-top: 5px;
+    width: 100%;
+    height: 50px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    display: flex;
+    position: relative;
+    
+}
+.home{
+    
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+   
+    color: black;
+    text-decoration: none;
+   
+   
+    
+}
+.home:hover{
+    transform: rotate(-5deg);
+}
+.bolly:hover{
+    transform: rotate(-5deg);
+}
+.tech:hover{
+    transform: rotate(-5deg);
+}
+.holly:hover{
+    transform: rotate(-5deg);
+}
+.fitness:hover{
+    transform: rotate(-5deg);
+}
+.food:hover{
+    transform: rotate(-5deg);
+}
+
+
+
+
+.bolly{
+    
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+   
+}
+
+   
+
+
+.tech{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+   
+}
+
+
+.holly{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+   
+}
+
+
+.fitness{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+   
+}
+
+
+
+.food{
+    font-weight: bold;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 15px;
+    color: black;
+    text-decoration: none;
+}
+
+hr{
+    border-top: 1px dotted black;
+} */
+/* OVER */
+
+
+
+
+/* HOME CSS */
+.home-main-container {
+    display: flex;
+    justify-content: center;
+
+}
+
+.header-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 550px;
+    width: 97%;
+}
+
+.box {
+    background-position: center;
+    background-size: cover;
+    border-radius: 10px;
+    display: flex;
+    justify-content: center;
+    overflow: hidden;
+    position: relative;
+
+
+}
+.box1img{
+    width: 100%;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
+}
+
+.box1 {
+   width: 550px;
+   height: 200px;
+
+}
+
+.box2 {
+    width: 200px;
+    height: 200px;
+}
+
+.box3 {
+    width: 200px;
+    height: 200px;
+}
+
+.headerbox-text {
+    color: white;
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    text-decoration: underline;
+    position: absolute;
+    bottom: -100px;
+    transition: 0.5s ease-in-out;
+    opacity: 0;
+}
+
+.box:hover .headerbox-text {
+    bottom: 120px;
+    opacity: 1;
+
+}
+
+
+/* second step */
+
+.secondpage {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: center;
+}
+
+.topthree {
+
+    border-radius: 10px;
+    margin-top: 50px;
+    width: 95%;
+    height: 360px;
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+.one-topthree {
+    border: 2px solid black;
+    border-radius: 10px;
+}
+
+.two-topthree {
+    border: 2px solid black;
+    border-radius: 10px;
+    overflow: hidden;
+
+}
+
+.three-topthree {
+    border: 2px solid black;
+    border-radius: 10px;
+
+}
+
+/* third step */
+.third-step {
+    margin-top: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 30px;
+}
+
+.third-left {
+    width: 62%;
+    height: 95vh;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    align-content: center;
+    border-radius: 10px;
+
+}
+.third-left-h2{
+    font-weight: bolder;
+    font-size: 30px;
+    padding-bottom: 10px;
+}
+.third-left-pera{
+    padding-top: 10px;
+    width: 600px;
+    font-weight: bold;
+}
+.third-left-image{
+    border-radius: 10px;
+    width: 700px;
+    height: 400px;
+}
+
+.third-right {
+    
+    width: 32%;
+    height: 95vh;
+    border-radius: 10px;
+    border-top: 2px solid black;
+    border-bottom: 2px solid black;
+    
+    align-content: center;
+
+}
+.third-right-image{
+    border-radius: 10px;
+    width: 300px;
+    height: 190px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Footer */
+
+.footer{
+    position: sticky;
+    background-color: #dae4e8;
+    margin: 50px 0px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.footerlogo{
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: left;
+}
+.footermainlogo{
+text-align: left;
+align-self: flex-start;
+}
+.footerboutblog{
+    text-align: left;
+}
+.socialmedia{
+    height: 50px;
+}
+.footernav{
+    display: flex;
+    gap: 30px;
+}
+.footermenulist{
+    margin-top: 30px;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.footermenu{
+    text-align: left;
+    height: 40px;
+}
+.footermenu:hover>.menu_underline{
+    animation: underlinemove 1s infinite ;
+} 
+.footerresoption{
+    text-align: left;
+    margin-top: 30px;
+}
+.footerresoption>p{
+    /* gap: 20px; */
+    text-align: left;
+}
+.footerenjoy{
+    width: 225px;
+}
+.footerenjoy>h1{
+    text-align: left;
+    font-size: 26px;
+    animation: fontcolorchange 3s infinite ease;
+}
+@keyframes fontcolorchange {
+    0%{
+        color: red;
+    }
+    10%{
+        color: green;
+    }
+    20%{
+        color: blue;
+    }
+    30%{
+        color: purple;
+    }
+   
+    50%{
+        color: yellowgreen;
+    }
+    60%{
+        color: black;
+    }
+   
+    80%{
+        color: maroon;
+    }
+   
+    100%{
+        color: darkslategrey;
+    }
+}
+
+
+.scrolltoperoimg{
+    background-image: url(./assets/white-top-ero.png);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.scrollbutton{
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 15;
+    background-color: #5fd2d4;
+    padding: 5px;
+    color: #1c3342;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    gap: 5px;
+}
+.scrollbutton:hover{
+    background-color: #1c331c;
+    color: #5fd2d4;
+    transition: 0.5s;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    box-shadow: -1px -1px 3px 0px #1c331c;
+}
+.socialmedia{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+}
+.twitter{
+    background-image: url(./assets/Black-Twitter.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: twitteranim 5s 0s infinite;
+    cursor: pointer;
+}
+@keyframes twitteranim {
+    0%{}
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.facebook{
+    background-image: url(./assets/Black-Facebook.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: facebookanim 5s 0s infinite ease;
+    cursor: pointer;
+}
+@keyframes facebookanim {
+    0%{}
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.YouTube{
+    background-image: url(./assets/Black-YouTube.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: youtubeanim 0.4s infinite ease;
+    animation-delay: 1s;
+    cursor: pointer;
+}
+@keyframes youtubeanim {
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+} 
+.instagram{
+    background-image: url(./assets/Black-Inastagram.png);
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: instagramanim 1s infinite ease;
+    cursor: pointer;
+}
+@keyframes instagramanim {
+    0%{
+        height: 40px;
+        width: 40px;
+    }
+    50%{
+        height: 45px;
+        width: 45px;
+    }
+    100%{
+        height: 40px;
+        width: 40px;
+    }
+}
+/* OVER */
+
+
+/* bollywood css */
+.main-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    
+   
+}
+.button{
+    cursor: pointer;
+    border: 0px;
+    width: 150px;
+    height: 50px;
+    border-radius: 40px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.bollywood-image{
+    
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+.data{
+    width: 750px;
+    height: 200px;
+    text-decoration: none;
+    color: black;
+    font-size: 12px;
+    font-weight: bold;
+    display: flex;
+    gap: 20px;
+    overflow: hidden;
+
+    
+}
+.nav-link{
+    text-decoration: none;
+
+}
+
+.childdata{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.container{
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+}
+.rightside{
+    width: 400px;
+    height: 800px;
+    position: absolute;
+    top: 170px;
+    right: 80px;
+    border-radius: 10px;
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    
+    align-items: center;
+
+}
+.inner-image{
+    width: 350px;
+    height: 200px;
+    border-radius: 10px;
+}
+.inner-data{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: black;
+    
+}
+.topmovies{
+    padding: 20px;
+}
+.ad{
+    width: 400px;
+    height: auto;
+    position: absolute;
+    left: 860px;
+    top: 1000px;
+    overflow: hidden;
+}
+.ad-image{
+    width: 400px;
+    height: 350px;
+    
+}
+.AdHeading{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.AdHeading>p{
+    font-size: 30px;
+    animation: AdHead 3s infinite ease;
+    overflow: hidden;
+    text-align: center;
+    border-right: 3px solid #82d2d5;
+    margin: 10px;
+}
+@keyframes AdHead{
+    0%{
+        color: red;
+        width: 0px;
+    }
+    20%{
+        color: blue;
+    }
+    40%{
+        color: green;
+
+    }
+    50%{
+        width: 170px;
+    }
+    60%{
+        color: chocolate;
+
+    }
+    80%{
+        color: purple;
+
+    }
+    100%{
+        color: red;
+        width: 0px;
+    }
+}
+
+
+
+/* OVER */
+
+/* DETAILS CSS */
+/* Details */
+.pardetailslogo{
+    display: flex;
+    justify-content: center;
+}
+.detailsParMain{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    display: flex;
+}
+.detailschildmain{
+    width: 500px;
+    background-color: #dae4e8;
+    padding: 30px;
+    margin: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #5fd2d4;
+
+}
+.DetailsTitle{
+    margin: 10px;
+    text-shadow: 1px 1px 3px #1c3342;
+}
+.Detailsimg{
+    width: 30rem;
+    align-self: center;
+    margin: 30px 0px 30px 0px;
+    box-shadow: 0px 0px 5px 1px #1c3342;
+}
+.DetailsDescription{
+    width: 30rem;
+    font-size: 25px;
+    text-align: left;
+}
+.MainDetails{
+    align-self: center;
+    text-align: center;
+}
+.BackButton{
+    top: 25px;
+    left : 25px;
+    position: fixed;
+    z-index: 15;
+    background-color: #5fd2d4;
+    padding: 5px;
+    color: #1c3342;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 18px;
+    cursor: pointer;
+    display: flex;
+    gap: 5px;
+}
+.BackButton:hover{
+    background-color: #1c331c;
+    color: #5fd2d4;
+    transition: 0.5s;
+    top: 26px;
+    left: 26px;
+    padding: 8px;
+    box-shadow: -1px -1px 3px 0px #1c331c;
+}
+.BackEroImg{
+    background-image: url(./assets/White_Left_Aero.png);
+    background-position: initial;
+    background-size: cover;
+    width: 25px;
+    height: 25px;
+    margin-top: 4px;
+}
+
+/* PERSONAL INFO */
+.personalintro{
+    display: flex;
+    gap: 30px;     
+}
+.paranimenamedate{
+    display: flex;
+    gap: 30px;
+}
+.animeImg{
+    background-image: url(./assets/Boy.png);
+    background-position: center;
+    background-size: cover;
+    height: 70px;
+    width: 60px;
+}
+.namedate{
+    padding: 5px;
+    font-weight: lighter;
+    gap: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+.socialmedia{
+    display: flex;
+    gap: 5px;
+    align-items: center;
+    padding: 10px;
+}
+.twitter{
+    background-image: url(./assets/Black-Twitter.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: twitteranim 5s 0s infinite;
+    cursor: pointer;
+}
+@keyframes twitteranim {
+    0%{}
+    100%{
+        transform: rotateY(360deg);
+    }
+}
+.facebook{
+    background-image: url(./assets/Black-Facebook.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: facebookanim 5s 0s infinite ease;
+    cursor: pointer;
+}
+@keyframes facebookanim {
+    0%{}
+    100%{
+        transform: rotate(360deg);
+    }
+}
+.YouTube{
+    background-image: url(./assets/Black-YouTube.png);
+    background-position: center;
+    background-size: cover;
+    height: 35px;
+    width: 35px;
+    animation: youtubeanim 0.4s infinite ease;
+    animation-delay: 1s;
+    cursor: pointer;
+}
+@keyframes youtubeanim {
+    0%{
+        transform: rotate(-10deg);
+    }
+    50%{
+        transform: rotate(10deg);
+    }
+    100%{
+        transform: rotate(-10deg);
+    }
+} 
+.instagram{
+    background-image: url(./assets/Black-Inastagram.png);
+    background-position: center;
+    background-size: cover;
+    height: 40px;
+    width: 40px;
+    animation: instagramanim 1s infinite ease;
+    cursor: pointer;
+}
+@keyframes instagramanim {
+    0%{
+        height: 40px;
+        width: 40px;
+    }
+    50%{
+        height: 45px;
+        width: 45px;
+    }
+    100%{
+        height: 40px;
+        width: 40px;
+    }
+}
+
+/* Like img */
+.like{
+    width: 120px;
+    left: 150px;
+    display: flex;
+    font-weight: bolder;
+    font-size: 26px;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+    cursor: pointer;
+}
+.likeimg{
+    background-image: url(./assets/Black-Like.png);
+    background-position: center;
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    animation: instagramanim 2s infinite ease;
+}
+.parlikeanime{
+    display: flex;
+    gap: 30px;
+}
+.likepotioned{
+    position: fixed;
+    top: 300px;
+    left: 100px;
+    z-index: 0;
+}
+.forward{
+    width: 160px;
+    left: 150px;
+    display: flex;
+    font-weight: bolder;
+    font-size: 26px;
+    gap: 20px;
+    justify-content: space-between;
+    margin: 20px;
+    cursor: pointer;
+}
+.forwardimg{
+    background-image: url(./assets/Black-Forward.png);
+    background-position: center;
+    background-size: cover;
+    width: 50px;
+    height: 50px;
+    animation: instagramanim 2s infinite ease;
+}
+.DetailsMore{
+    z-index: 8;
+    position: sticky;
+    background-color: #ffffff;
+}
+.DetailsMoreHead{
+    text-align: left;
+    margin: 50px 0px;
+}
+
+
+
+
+
+
+
+
+
+/* Bollywood */
+.main-heading{
+    text-align: left;
+    margin: 30px 0px 30px 0px;
+}
+.ChildMain{
+    display: flex;
+    align-self: center;
+    justify-content: space-around;
+}
+.BollyMainMovie{
+    width: 30%;
+    height: 30rem;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px 1px #66889e;
+    overflow: hidden;
+    background-color: #ffffff;
+}
+.BollyMainimg{
+    align-self: center;
+    width: 100%;
+    height: 200px;
+}
+.Title{
+    margin: 15px;
+    height: 30px;
+    text-align: left;
+    overflow: hidden;
+    animation: TitleShow 4s infinite;
+    transition: ease-in-out;
+    color: black;
+}
+.Title:hover{
+    color: #66889e;
+}
+@keyframes TitleShow {
+    0%{
+        width: 0px;
+        
+    }
+    100%{
+        width: 100%;
+    }
+}
+.description{
+    margin: 15px;
+    text-align: left;
+    color: black;
+}
+/* OVER */
+
+
+/* FOOTER CSS */
+.footer{
+    position: sticky;
+    background-color: #6d6d6d;
+    margin: 50px 0px;
+    padding: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.footerlogo{
+    width: 300px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: left;
+}
+.footermainlogo{
+text-align: left;
+align-self: flex-start;
+}
+.footerboutblog{
+    text-align: left;
+}
+.socialmedia{
+    height: 50px;
+}
+.footernav{
+    display: flex;
+    gap: 30px;
+}
+.footermenulist{
+    margin-top: 30px;
+    list-style-type: none;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+}
+.footermenu{
+    text-align: left;
+    height: 40px;
+}
+.footermenu:hover>.menu_underline{
+    animation: underlinemove 1s infinite ;
+} 
+.footerresoption{
+    text-align: left;
+    margin-top: 30px;
+}
+.footerresoption>p{
+    /* gap: 20px; */
+    text-align: left;
+}
+.footerenjoy{
+    width: 225px;
+}
+.footerenjoy>h1{
+    text-align: left;
+    font-size: 26px;
+    animation: fontcolorchange 3s infinite ease;
+}
+@keyframes fontcolorchange {
+    0%{
+        color: red;
+    }
+    10%{
+        color: green;
+    }
+    20%{
+        color: blue;
+    }
+    30%{
+        color: purple;
+    }
+   
+    50%{
+        color: yellowgreen;
+    }
+    60%{
+        color: black;
+    }
+   
+    80%{
+        color: maroon;
+    }
+   
+    100%{
+        color: darkslategrey;
+    }
+}
+
+
+.scrolltoperoimg{
+    background-image: url(./assets/white-top-ero.png);
+    background-position: center;
+    background-size: cover;
+    width: 30px;
+    height: 30px;
+}
+.scrollbutton{
+    display: flex;
+    bottom: 20px;
+    right: 20px;
+    position: absolute;
+    z-index: 15;
+    background-color: rgb(172, 154, 154);
+    padding: 5px;
+    color: #1c3342;
+    border-radius: 5px;
+    font-weight: 600;
+    font-size: 15px;
+    cursor: pointer;
+    gap: 5px;
+}
+.scrollbutton:hover{
+    background-color: #1c331c;
+    color: #5fd2d4;
+    transition: 0.5s;
+    bottom: 20px;
+    right: 20px;
+    padding: 8px;
+    box-shadow: -1px -1px 3px 0px #1c331c;
+}
+
+
+/* OVER */
