@@ -20,8 +20,7 @@ const Footer = () => {
           <div className="first-siren">Siren</div>
         </div>
             <p className="footerboutblog">
-              The Devil's Domain is an informational website published on the World Wide
-              Web for providing details of different category.
+            The Siren is an informational website published on the World Wide Web for providing details of different category.
             </p>
             <div className="socialmedia">
               <div className="twitter"></div>
