@@ -1,0 +1,25 @@
+.loading-div{
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.loader {
+    
+    width: 100%;
+    font-size: 40px;
+    font-family: system-ui,sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #0000;
+    -webkit-text-stroke: 1px #000;
+    background: conic-gradient(#000 0 0) 0/0% 100% no-repeat text;
+    animation: l1 1s linear infinite;
+  }
+  .loader:before {
+    content: "Loading";
+  }
+  @keyframes l1 {
+    to{background-size: 120% 100%}
+  }

@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Loading2 from "./Loading2";
 
 const Food = () => {
 
@@ -15,6 +16,11 @@ const Food = () => {
 
   const data = useContext(DataContext);
   console.log(data);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   const FoodData = data.filter((item) => item.category === "Food");
   console.log(FoodData);
@@ -36,6 +42,10 @@ const Food = () => {
   ];
 
   return (
+    <>
+    {loading ? (
+     <Loading2 setLoadingComplete={handleLoadingComplete} />
+   ) : (
     <>
       <Navigation />
       
@@ -128,6 +138,8 @@ const Food = () => {
 
 
       <Footer />
+      </>
+  )}
     </>
   )
 }

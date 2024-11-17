@@ -1,11 +1,12 @@
-import React from 'react'
+import React, { useState } from 'react'
 import './Blog.css'
 import { useContext } from 'react'
 import DataContext from './DataContext'
-import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Loading2 from "./Loading2";
+
 
 const Bollywood = () => {
 
@@ -15,6 +16,11 @@ const Bollywood = () => {
 
   const data = useContext(DataContext);
   console.log(data);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   const bollywoodData = data.filter((item) => item.category === "Bollywood");
   console.log(bollywoodData);
@@ -35,6 +41,10 @@ const Bollywood = () => {
   ];
 
   return (
+    <>
+    {loading ? (
+     <Loading2 setLoadingComplete={handleLoadingComplete} />
+   ) : (
     <>
       <Navigation />
       
@@ -127,6 +137,8 @@ const Bollywood = () => {
 
 
       <Footer />
+      </>
+  )}
     </>
   )
 }

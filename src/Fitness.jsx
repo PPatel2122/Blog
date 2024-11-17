@@ -6,11 +6,17 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Loading2 from "./Loading2";
 
 const Fitness = () => {
 
   const [visible, setVisible] = useState(3);
   const [visibl, setVisibl] = useState(6);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   const data = useContext(DataContext);
   console.log(data);
@@ -34,6 +40,10 @@ const Fitness = () => {
   ];
 
   return (
+    <>
+    {loading ? (
+     <Loading2 setLoadingComplete={handleLoadingComplete} />
+   ) : (
     <>
        <Navigation />
       
@@ -126,6 +136,8 @@ const Fitness = () => {
 
 
       <Footer />
+      </>
+  )}
     </>
   )
 }

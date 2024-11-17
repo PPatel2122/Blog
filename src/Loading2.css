@@ -1,0 +1,19 @@
+.loading-div2{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+.loader2 {
+   
+    width: 120px;
+    height: 20px;
+    background:
+     linear-gradient(#000 0 0) 0/0% no-repeat
+     #ddd;
+    animation: l1 2s infinite linear;
+  }
+  @keyframes l1 {
+      100% {background-size:100%}
+  }

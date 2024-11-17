@@ -4,6 +4,8 @@ import DataContext from "./DataContext";
 import "./Blog.css";
 import { Link } from "react-router-dom";
 import Footer from "./Footer";
+import Loading from "./Loading";
+  
 
 
 
@@ -78,6 +80,10 @@ const Home = () => {
   
 
   return (
+    <>
+    {loading ? (
+     <Loading setLoadingComplete={handleLoadingComplete} />
+   ) : (
    
     <>
     <div className="full-body">
@@ -189,7 +195,10 @@ const Home = () => {
       <Footer />
      </div>
 
+     </>
+  )}
     </>
+
   )
 }
 

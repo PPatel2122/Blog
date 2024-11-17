@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Loading2 from "./Loading2";
 
 const Technology = () => {
 
@@ -15,6 +16,11 @@ const Technology = () => {
 
   const data = useContext(DataContext);
   console.log(data);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   const TechnologyData = data.filter((item) => item.category === "Technology");
   console.log(TechnologyData);
@@ -34,6 +40,11 @@ const Technology = () => {
   ];
 
   return (
+    <>
+    {loading ? (
+      <Loading2 setLoadingComplete={handleLoadingComplete} />
+    ) : (
+     
     <>
       <Navigation />
       
@@ -126,6 +137,8 @@ const Technology = () => {
 
 
       <Footer />
+      </>
+  )}
     </>
   )
 }

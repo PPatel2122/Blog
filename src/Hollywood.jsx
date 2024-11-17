@@ -6,6 +6,7 @@ import { useState } from 'react'
 import { Link } from 'react-router-dom';
 import Navigation from './Navigation';
 import Footer from './Footer'
+import Loading2 from "./Loading2";
 
 const Hollywood = () => {
 
@@ -17,6 +18,11 @@ const Hollywood = () => {
 
   const HollywoodData = data.filter((item) => item.category === "Hollywood");
   console.log(HollywoodData);
+  const [loading, setLoading] = useState(true);
+
+  const handleLoadingComplete = () => {
+    setLoading(false);
+  };
 
   const handleLoad = () => {
     setVisible((prev) => prev + 3)
@@ -35,6 +41,10 @@ const Hollywood = () => {
   ];
 
   return (
+    <>
+    {loading ? (
+     <Loading2 setLoadingComplete={handleLoadingComplete} />
+   ) : (
     <>
        <Navigation />
       
@@ -127,6 +137,8 @@ const Hollywood = () => {
 
 
       <Footer />
+      </>
+  )}
     </>
   )
 }
