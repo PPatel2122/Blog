@@ -134,9 +134,11 @@ const Home = () => {
               <>
                 <div className="BollyMainMovie" key={index}>
               <Link to={`/details/${item.id}`} key={item.id}>
+             
                 <img src={item.img_url || 'fallback-image-url'} alt="Bollywood movie" className="BollyMainimg" />
                 <h3 className="Title">{item.title}</h3>
                 <p className="description">{item.description}</p>
+                
               </Link>
               </div>
               </>
@@ -154,6 +156,7 @@ const Home = () => {
           {data.slice(0,5).map((item) => (
             <>
               <Link className="storydata" to={`/details/${item.id}`}>
+             
                 <div className="storyimg">
                   <img className="imagestory" src={item.img_url} alt="data" />
                   <h3 className="storycategory">{item.category}</h3>
@@ -164,6 +167,7 @@ const Home = () => {
                     {item.description}
                   </p>
                 </div>
+               
               </Link>
             </>
           ))}
