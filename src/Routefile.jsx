@@ -6,6 +6,7 @@ import Hollywood from './Hollywood'
 import Fitness from './Fitness'
 import Food from './Food'
 import Details from './Details'
+import SearchResults from './SearchResults'
 import {BrowserRouter,Routes,Route} from 'react-router-dom'
 
 const Routefile = () => {
@@ -21,6 +22,7 @@ const Routefile = () => {
         <Route path='/fitness' element={<Fitness/>}></Route>
         <Route path='/food' element={<Food/>}></Route>
         <Route path='/detail/:id' element={<Details/>}></Route>
+        <Route path="/search/:searchText" element={<SearchResults/>}></Route>
     </Routes>
     </BrowserRouter>
     </>

@@ -77,6 +77,149 @@ body{
 
 /* NAVBAR CSS */
 
+.nav-search{
+    width: 100%;
+    height: 50px;
+    display: flex;
+    flex-direction: row;
+   
+}
+
+.search-container{
+   width: 30%;
+   height: 50px;
+   align-self: center;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   justify-items: center;
+}
+.search-input{
+    width: 200px;
+    height: 30px;
+    border: 2px solid black;
+  
+}
+
+
+
+.search-button{
+    height: 36px;
+  background-color: #fff;
+  border: 0 solid #e2e8f0;
+  
+  box-sizing: border-box;
+  color: #0d172a;
+  cursor: pointer;
+  display: inline-block;
+  font-family: "Basier circle",-apple-system,system-ui,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1;
+  padding: 1rem 1.6rem;
+  text-align: center;
+  text-decoration: none #0d172a solid;
+  text-decoration-thickness: auto;
+  transition: all .1s cubic-bezier(.4, 0, .2, 1);
+  box-shadow: 0px 1px 2px rgba(166, 175, 195, 0.25);
+  border: 2px solid black;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.search-button:hover {
+  background-color: #1e293b;
+  color: #fff;
+}
+
+/* search result css */
+.search-result {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.search-result button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-bottom: 20px;
+    transition: background-color 0.3s;
+}
+
+.search-result button:hover {
+    background-color: #ff0000;
+}
+
+.search-result h1 {
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 15px;
+}
+
+.search-result h2 {
+    font-size: 20px;
+    color: #999;
+}
+
+.result-contain {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    justify-content: center;
+}
+
+.result-contain a {
+    display: block;
+    text-decoration: none;
+    color: #333;
+    width: 400px;
+    text-align: center;
+    transition: transform 0.2s, box-shadow 0.2s;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fff;
+    padding: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.result-contain a:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.search-img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.result-contain p {
+    font-size: 14px;
+    color: #666;
+    line-height: 1.4;
+}
+
+
+
+
+/* search result css over */
+
+.nav-right{
+  width: 80%;
+  height: 50px;
+}
 .menu-bar{
     display: flex;
     justify-content: space-around;
@@ -1377,6 +1520,7 @@ align-self: flex-start;
 /* OVER */
 
 
+
 /* phone viwe */
 @media screen and (max-width: 600px) {
     /* HEAD  */
@@ -1569,4 +1713,16 @@ align-self: flex-start;
     .namedate{
         gap: 20px;
     }
+
+    /* seacrh bar */
+    .search-container{
+        width: 100%;
+    }
+    .nav-search{
+        width: 100%;
+    }
+    .nav-right{
+        width: 0px;
+    }
+    
 }

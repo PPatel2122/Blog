@@ -12,8 +12,7 @@ function App() {
     <>
     <DataProvider>
     <Routefile/> 
-    
-   </DataProvider>
+    </DataProvider>
     
     </>
   )
