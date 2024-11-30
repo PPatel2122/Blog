@@ -150,7 +150,7 @@ const Home = () => {
       <div className="storypost">
         <div className="topstories">
           <div className="homeheading">
-            <h1>Top Stories</h1>
+            <h1> Stories</h1>
             <div className="homeheadunderline"></div>
           </div>
           {data.slice(0,5).map((item) => (
