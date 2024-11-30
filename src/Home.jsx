@@ -50,33 +50,45 @@ const Home = () => {
     51, 53, 62, 65, 66, 67, 69, 70, 73, 75, 76, 77, 83, 84,
   ];
 
-  const img1 = data.find(
-    (item) =>
-      item.id ===
-      parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
-  ) || {};
+  // const img1 = data.find(
+  //   (item) =>
+  //     item.id ===
+  //     parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
+  // ) || {};
 
-  const img2 = data.find(
-    (item) =>
-      item.id ===
-      parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
-  ) || {};
+  // const img2 = data.find(
+  //   (item) =>
+  //     item.id ===
+  //     parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
+  // ) || {};
 
-  const img3 = data.find(
-    (item) =>
-      item.id ===
-      parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
-  ) || {};
+  // const img3 = data.find(
+  //   (item) =>
+  //     item.id ===
+  //     parseInt(SelectedArray[(Math.round(Math.random() * (SelectedArray.length - 2))) + 1])
+  // ) || {};
 
   
 
-  let random = Math.floor(Math.random() * (data.length - 2)); // Ensures there are enough elements for slicing
-  if (random < 0) random = 0;
+  // let random = Math.floor(Math.random() * (data.length - 2)); // Ensures there are enough elements for slicing
+  // if (random < 0) random = 0;
   
 
-  if (random == (data.length - 2)) {
-    random = random - 1;
-  }
+  // if (random == (data.length - 2)) {
+  //   random = random - 1;
+  // }
+  const getRandomDataItem = () => {
+    const randomIndex = Math.floor(
+      Math.random() * (SelectedArray.length - 1)
+    );
+    return data.find((item) => item.id === parseInt(SelectedArray[randomIndex]));
+  };
+
+  const img1 = getRandomDataItem() || {};
+  const img2 = getRandomDataItem() || {};
+  const img3 = getRandomDataItem() || {};
+
+  const random = Math.floor(Math.random() * Math.max(data.length - 2, 1));
   
 
   return (
@@ -150,7 +162,7 @@ const Home = () => {
       <div className="storypost">
         <div className="topstories">
           <div className="homeheading">
-            <h1> Stories</h1>
+            <h1>Top Stories</h1>
             <div className="homeheadunderline"></div>
           </div>
           {data.slice(0,5).map((item) => (

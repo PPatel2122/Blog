@@ -102,10 +102,11 @@ const Navigation = () => {
           </div>
         </nav>
       </div>
+      
+      </div>
       <div className="search-container">
         <input type="text" value={searchText} onChange={(e) => setSearchText(e.target.value)} className="search-input" />
         <button onClick={handleSearch} className="search-button">Search</button>
-      </div>
       </div>
     </>
   )
